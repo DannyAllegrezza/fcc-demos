@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FCC Pomodoro Timer!</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+    <div class="app-container">
+
+        <div class="app-title">
+            <h1>Pomodoro Timer</h1>
+            <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" />
+        </div>
+
+        <p>A pomodoro is generally recognized as a 25 minute session followed by a 5 minute break. Feel free to
+            customize these options before pressing the <b>START</b> button!</p>
+
+        <div class="app-controls">
+            <div class="break-controls">
+                <h3 id="break-label">Break Length</h3>
+                <span class="btn" id="break-decrement">-</span>
+                <span id="break-length">5</span>
+                <span class="btn" id="break-increment">+</span>
+            </div>
+
+            <div class="session-controls">
+                <H3 id="session-label">Session Length</H3>
+                <span class="btn" id="session-decrement">-</span>
+                <span id="session-length">25</span>
+                <span class="btn" id="session-increment">+</span>
+            </div>
+        </div>
+
+        <div class="session-info">
+            <h2 id="timer-label">Session</h2>
+            <!--       <h1 id="time-left" class="time-left">25:00</h1> -->
+            <h1 id="time-left" class="time-left">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </h1>
+        </div>
+
+        <div id="start_stop" class="btn" data-state="off">START</div>
+        <div id="reset" class="btn">RESET</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
