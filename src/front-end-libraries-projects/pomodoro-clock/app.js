@@ -80,7 +80,6 @@ let pomodoroTimer = (function () {
     // Starts the timer interval for n-number of seconds
     let start = function (seconds) {
         if (!_state.isRunning) {
-            console.log("start() called - state is running");
             _state.isRunning = true;
 
             let now = Date.now();
@@ -123,8 +122,6 @@ let pomodoroTimer = (function () {
         }
     };
 
-    let stop = function () { };
-
     let reset = function () {
         // Reset everything, rewind audio
         console.log("Reset button clicked");
@@ -136,13 +133,13 @@ let pomodoroTimer = (function () {
         document.querySelector("#session-length").innerText = 25;
         document.querySelector("#minutes").textContent = "25";
         document.querySelector("#seconds").textContent = "00";
+        document.title = `25:00`;
         _alarm.pause();
         _alarm.currentTime = 0;
     };
 
     return {
         getCurrentTime: getCurrentTime,
-        stop: stop,
         reset: reset,
         start: start,
         test: function (numOfSeconds) {
