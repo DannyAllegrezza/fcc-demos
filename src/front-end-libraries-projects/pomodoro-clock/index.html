@@ -18,39 +18,47 @@
     <div class="app-container">
 
         <div class="app-title">
-            <h1>Pomodoro Timer</h1>
-            <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" />
+            <header>
+                <h1>Pomodoro Timer 🍅⌚</h1>
+                <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" />
+            </header>
         </div>
 
-        <p>A pomodoro is generally recognized as a 25 minute session followed by a 5 minute break. Feel free to
-            customize these options before pressing the <b>START</b> button!</p>
+
+
+        <p class="info">A pomodoro is generally recognized as a 25 minute session followed by a 5 minute
+            break. Feel free to customize these options before pressing the <b>START</b> button!</p>
+
 
         <div class="app-controls">
             <div class="break-controls">
                 <h3 id="break-label">Break Length</h3>
-                <span class="btn" id="break-decrement">-</span>
+                <span class="" id="break-decrement">➖</span>
                 <span id="break-length">5</span>
-                <span class="btn" id="break-increment">+</span>
+                <span>min</span>
+                <span class="" id="break-increment">➕</span>
             </div>
 
             <div class="session-controls">
                 <H3 id="session-label">Session Length</H3>
-                <span class="btn" id="session-decrement">-</span>
+                <span class="" id="session-decrement">➖</span>
                 <span id="session-length">25</span>
-                <span class="btn" id="session-increment">+</span>
+                <span>min</span>
+                <span class="" id="session-increment">➕</span>
             </div>
         </div>
 
         <div class="session-info">
-            <h2 id="timer-label">Session</h2>
-            <!--       <h1 id="time-left" class="time-left">25:00</h1> -->
-            <h1 id="time-left" class="time-left">
+            <h1 id="timer-label">Session ⏳</h1>
+            <p id="time-left" class="time-left">
                 <span id="minutes">25</span>:<span id="seconds">00</span>
-            </h1>
+            </p>
         </div>
 
-        <div id="start_stop" class="btn" data-state="off">START</div>
-        <div id="reset" class="btn">RESET</div>
+        <div class="app-actions">
+            <div id="start_stop" class="btn" data-state="off">START</div>
+            <div id="reset" class="btn">RESET</div>
+        </div>
     </div>
 
     <script src="app.js"></script>

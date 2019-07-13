@@ -1,41 +1,87 @@
+:root {
+  --very-subtle: rgba(0, 0, 0, .05);
+  --subtle-yellow1: rgba(239, 187, 53, 0.6);
+  --yellow: #fae042;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif;
-  line-height: 1.6;
-  color: #222;
-  max-width: 40rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #F9FFEE;
+  max-width: 45rem;
   padding: 2rem;
   margin: auto;
-  background: #f6000085;
+  background: #222831;
 }
 
 h1,
 h2,
 strong {
-  color: #111;
+  font-size: 3.7em;
+  margin-top: .4em;
+  margin-bottom: .2em;
+  color: var(--yellow);
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
+header {
+  text-align: center;
 }
-.flex-container {
-  display: flex;
-  flex-direction: container;
+
+p {
+  font-size: 24px;
+}
+
+.time-left {
+  font-size: 10rem;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 .app-container {
-  padding-top: 10rem;
+  padding-top: 2rem;
 }
+
+.app-actions {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-actions:nth-child(1){
+  margin:20px;
+}
+
 .app-controls {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 
-.session-info {
+.session-info, .app-title {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  border-radius: 3px;
+  margin: 2rem 0;
+  font-family: monospace;
+  padding: 2rem 2rem 2rem 2rem;
+  background: repeating-linear-gradient(45deg, transparent, transparent 25px, var(--very-subtle) 25px, var(--very-subtle) 50px);
+  border: 5px solid var(--subtle-yellow1);
+  border-image-source: linear-gradient(45deg, #fae042, #fae042);
+  border-image-slice: 1;
+}
+
+.break-controls, .session-controls {
+
 }
 
 .btn {

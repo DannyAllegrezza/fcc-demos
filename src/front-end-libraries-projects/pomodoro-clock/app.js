@@ -183,4 +183,4 @@ document.querySelector("#session-increment").addEventListener("click", function 
 });
 
 
-pomodoroTimer.start(2);
+//pomodoroTimer.start(2);
