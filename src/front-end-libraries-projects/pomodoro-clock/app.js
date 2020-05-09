@@ -78,7 +78,7 @@ let pomodoroTimer = (function () {
 		// TODO: Update this method to return either min, seconds, or display, or all three.. need to update the proper elements
 	};
 
-	let updateHistory = function(currentType){
+	let updateHistory = function (currentType) {
 		var li = document.createElement('li');
 
 		if (currentType === "SESSION") {
@@ -106,7 +106,7 @@ let pomodoroTimer = (function () {
 					if (_state.currentType === "SESSION") {
 						_state.pomodorosCompleted++;
 						updateHistory(_state.currentType);
-						
+
 						_state.currentType = "BREAK";
 						_timerLabel.innerText = "Your break has started. Enjoy!";
 						let seconds = Number(_breakLength.innerText) * 60;
@@ -203,5 +203,5 @@ document.querySelector("#session-increment").addEventListener("click", function 
 	pomodoroTimer.incrementCounter(document.querySelector("#session-length"), "SESSION");
 });
 
-
-pomodoroTimer.start(2);
+// uncomment to start the timer with a 2 second session length
+//pomodoroTimer.start(2);
